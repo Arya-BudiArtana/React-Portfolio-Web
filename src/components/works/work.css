@@ -1,0 +1,77 @@
+.work{
+    padding: 0 3rem 0 3rem;
+    display: flex;
+    height: 90vh;
+    margin-top: 4rem;
+}
+
+.w-right {
+    position: relative;
+}
+
+.w-mainCircle{
+    left: 3rem;
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 100%;
+    box-shadow: var(--boxShadow);
+    top: 2rem;
+    background: white;
+}
+
+.w-mainCircle>* {
+    position: absolute;
+}
+
+.w-mainCircle > :nth-child(1) {
+    top: -3rem;
+    left: 4.4rem;
+}
+
+.w-mainCircle > :nth-child(2) {
+    top: 7rem;
+    left: 11rem;
+}
+
+.w-mainCircle > :nth-child(3) {
+    top: 7rem;
+    left: -2rem;
+}
+
+.w-secCircle {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 100%;
+    position: absolute;
+    border: 5px solid #ebebeb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+}
+
+.w-secCircle > img {
+ transform: scale(0.6);   
+}
+
+.w-backCircle{
+    position: absolute;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 100%;
+    z-index: -11;
+
+}
+
+.blueCircle {
+    background: rgb(9, 74, 226);
+    left: 12rem;
+    top: 0;
+}
+
+.yellowCircle {
+    background: rgb(255, 174, 0);
+    left: 12rem;
+    top: 8rem;
+}

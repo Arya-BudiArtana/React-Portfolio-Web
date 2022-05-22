@@ -35,7 +35,7 @@ const Services = () => {
             </div>
 
             <div style={{left:'8rem', top:'17rem'}}>
-                <Card emoji={Humble} heading={'Developer'} detail ={'Landing Pages, One Page Application, Personal/Portfolio Web'}></Card>
+                <Card emoji={Humble} heading={'Developer'} detail ={'Landing Pages, WordPress, Personal/Portfolio Web, '}></Card>
             </div>
             <div className="blur s-blur2" style={{background: "var(--purple)"}}></div>
         </div>
