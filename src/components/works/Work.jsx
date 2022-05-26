@@ -14,11 +14,10 @@ const Work = () => {
                 <br />
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum dolor praesentium at non, dolore quod!
             </span>
-            <a >
+            <a href='#'>
             <button className="button s-button">
                 Hire me
             </button>
-
             </a>
             <div className="blur s-blur" style={{background: "#ABF1FF94"}}></div>
         </div>
