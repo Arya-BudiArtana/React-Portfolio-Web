@@ -10,12 +10,16 @@ import Foto from "../../img/boy.png";
 import Thumbup from "../../img/thumbup.png";
 import Crown from "../../img/crown.png";
 import emoji from "../../img/glassesimoji.png";
+import { themeContext } from "../../Context";
+import { useContext } from "react";
 const Intro = () => {
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode
   return (
     <div className="intro">
       <div className="i-left">
         <div className="i-name">
-          <span>Hy! I Am</span>
+          <span style={{color  : darkMode ? "white" : ""}}>Hy! I Am</span>
           <span>Arya Budi Artana</span>
           <span>
             Fronted Web Developer with hight level of experience in web designing

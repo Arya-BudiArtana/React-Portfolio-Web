@@ -7,10 +7,19 @@ import Portfolio from "./components/portfolio/Portfolio";
 import Testi from "./components/testimonials/Testi";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
+import { themeContext } from "./Context";
+import { useContext } from "react";
 import './App.css'
 function App() {
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
   return (
-    <div className="App">
+    <div className="App"
+    style={{
+      background: darkMode ? "black" : "",
+      color  : darkMode ? "white" : "",
+    }}
+    >
       <Navbar></Navbar>
       <Intro></Intro>
       <Services></Services>

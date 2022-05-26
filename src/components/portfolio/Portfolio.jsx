@@ -6,10 +6,14 @@ import P1 from "../../img/sidebar.png";
 import P2 from "../../img/ecommerce.png";
 import P3 from "../../img/hoc.png";
 import P4 from "../../img/musicapp.png";
+import { themeContext } from "../../Context";
+import { useContext } from "react";
 const Portfolio = () => {
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode
   return (
     <div className="portfolio">
-      <span>Recent Project</span>
+      <span style={{color  : darkMode ? "white" : ""}}>Recent Project</span>
       <span>Portfolio</span>
 
       <Swiper

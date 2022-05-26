@@ -3,13 +3,17 @@ import "./work.css";
 import Upwork from "../../img/Facebook.png";
 import Fiverr from "../../img/fiverr.png";
 import Amazon from "../../img/Shopify.png";
+import { themeContext } from "../../Context";
+import { useContext } from "react";
 const Work = () => {
+    const theme = useContext(themeContext);
+    const darkMode = theme.state.darkMode
   return (
     <div className="work">
-        <div className="awesome">
-            <span>Works for all these</span>
+        <div className="awesome" >
+            <span style={{color  : darkMode ? "white" : ""}}>Works for all these</span>
             <span>Brands & Clients</span>
-            <span>
+            <span style={{color  : darkMode ? "white" : ""}}>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, facere.
                 <br />
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum dolor praesentium at non, dolore quod!
