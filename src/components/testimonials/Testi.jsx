@@ -40,7 +40,7 @@ const Testi = () => {
         }
     ]
   return (
-    <div className="testi">
+    <div className="testi" id="Testi">
         <div className="t-heading">
             <span>Clients always get </span>
             <span>Exceptional Work </span>

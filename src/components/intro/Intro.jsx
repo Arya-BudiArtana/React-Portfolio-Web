@@ -12,7 +12,14 @@ import Crown from "../../img/crown.png";
 import emoji from "../../img/glassesimoji.png";
 import { themeContext } from "../../Context";
 import { useContext } from "react";
+import {motion} from "framer-motion";
 const Intro = () => {
+
+  const trans = {
+    duration: 2,
+    tyoe: 'spring',
+  }
+
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode
   return (
@@ -43,13 +50,27 @@ const Intro = () => {
           <img src={Vector1} alt="" />
           <img src={Vector2} alt="" />
           <img src={Foto} alt="" />
-          <img src={emoji} alt="" />
-          <div style={{top:'-4%', left:'68%'}}>
+          <motion.img
+          initial={{left: '-36%'}}
+          whileInView={{left: "-24%"}}
+          transition= {trans}
+          src={emoji} alt="" />
+          <motion.div 
+          initial={{top: '-4%', left: '74%'}}
+          whileInView={{left: "68%"}}
+          transition= {trans}
+          className='floating-div'
+          style={{top:'-4%', left:'68%'}}>
               <Floating image={Crown} txt1='Web' txt2 ='Developer'></Floating>
-          </div>
-          <div style={{top:'18rem', left:'0rem'}}>
+          </motion.div>
+          <motion.div
+          initial={{top: '18rem', left: '18rem'}}
+          whileInView={{left: "0rem"}}
+          transition= {trans} 
+          className='floating-div'        
+          style={{top:'18rem', left:'0rem'}}>
               <Floating image={Thumbup} txt1='Frontend' txt2 ='Developer'></Floating>
-          </div>
+          </motion.div>
           <div className="blur" style={{background:"rgb(238 210 255"}}></div>
           <div className="blur" style={{background:"#C1F5FF", top:'17rem', width:'21rem', height:'11rem', left:'-9rem'}}></div>
       </div>

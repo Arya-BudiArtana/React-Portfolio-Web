@@ -56,23 +56,41 @@
  transform: scale(0.6);   
 }
 
-.w-backCircle{
+.blueCircle {
     position: absolute;
     height: 10rem;
     width: 10rem;
     border-radius: 100%;
     z-index: -11;
-
-}
-
-.blueCircle {
     background: rgb(9, 74, 226);
     left: 12rem;
     top: 0;
 }
 
 .yellowCircle {
+    position: absolute;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 100%;
+    z-index: -11;
     background: rgb(255, 174, 0);
     left: 12rem;
     top: 8rem;
 }
+
+@media screen and (max-width: 480px){
+    .work {
+        flex-direction: column;
+        height: 55rem;
+        padding: 0;
+        gap: 5rem;
+    }
+
+    .w-right {
+        display: flex;
+        align-items: flex-start;
+        justify-content: start;
+        transform: scale(0.8);
+    }
+   }
+

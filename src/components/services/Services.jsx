@@ -7,11 +7,16 @@ import Card from '../cards/Card'
 import Resume from "../../img/humble.png"
 import { themeContext } from "../../Context";
 import { useContext } from "react";
+import {motion} from "framer-motion"
 const Services = () => {
+    const trans = {
+        duration: 1,
+        type: "spring"
+      }
     const theme = useContext(themeContext);
     const darkMode = theme.state.darkMode
   return (
-    <div className="services">
+    <div className="services" id="Services">
         <div className="awesome">
             <span style={{color  : darkMode ? "white" : ""}}>My Awesome</span>
             <span>Services</span>
@@ -30,17 +35,22 @@ const Services = () => {
         </div>
 
         <div className="cards">
-            <div style={{left:'2rem'}}>
+            <motion.div
+          initial={{left: '14rem'}}
+          whileInView={{left: "25%"}}
+          transition= {trans}            
+            style={{left:'2rem'}}>
                 <Card emoji={Heart} heading={'Work on'} detail ={'HTML, CSS, JavaScript, React.js, Visual Basic'}></Card>
-            </div>
+            </motion.div>
 
             <div style={{left:'-8rem', top:'14rem'}}>
                 <Card emoji={Glasses} heading={'Basics'} detail ={'Microsoft Excel, Microsoft Word, Microsoft Power Point'}></Card>
             </div>
 
-            <div style={{left:'8rem', top:'17rem'}}>
+            <motion.div 
+            style={{left:'8rem', top:'17rem'}}>
                 <Card emoji={Humble} heading={'Developer'} detail ={'Landing Pages, WordPress, Personal/Portfolio Web, '}></Card>
-            </div>
+            </motion.div>
             <div className="blur s-blur2" style={{background: "var(--purple)"}}></div>
         </div>
     </div>
